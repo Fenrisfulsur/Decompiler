@@ -4,8 +4,14 @@ project(DecompilerTest)
 set(CMAKE_CXX_STANDARD 20)
 
 
-add_executable(DecompilerTest
-        source/main.cpp
+add_executable(Decompileri8042Test
+        source/main_i8042.cpp
 )
 
-target_link_libraries(DecompilerTest PUBLIC DecompilerLib)
+add_executable(DecompilerARMTest
+        source/main_arm.cpp
+)
+
+target_link_libraries(Decompileri8042Test PUBLIC DecompilerLib)
+target_link_libraries(DecompilerARMTest PUBLIC DecompilerLib)
+
